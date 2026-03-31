@@ -1609,3 +1609,145 @@ a.channel__card:hover .channel__arrow {
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
+/* ─── CERTIFICADOS (CARROSSEL) ───────────────────────────── */
+/* ─── CERTIFICADOS ───────────────────────────── */
+.certificados {
+  background: var(--color-black);
+  position: relative;
+}
+
+.certificados__wrapper {
+  position: relative;
+}
+
+/* CARROSSEL */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.carousel__track {
+  display: flex;
+  gap: var(--space-6);
+  transition: transform 0.5s ease;
+  align-items: center;
+}
+
+/* CARD BASE */
+.cert-card {
+  min-width: 280px;
+  max-width: 320px;
+  flex: 0 0 auto;
+
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+
+  transition: all var(--transition-base);
+
+  /* 🔥 estado padrão (apagado) */
+  opacity: 0.4;
+  transform: scale(0.85);
+  filter: blur(1px);
+}
+
+/* HOVER */
+.cert-card:hover {
+  transform: translateY(-6px) scale(0.9);
+  box-shadow: var(--shadow-lg), var(--glow-electric);
+  border-color: rgba(10, 132, 255, 0.3);
+}
+
+/* CARD ATIVO (centro) */
+.cert-card.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+  z-index: 2;
+  box-shadow: var(--shadow-xl), var(--glow-electric);
+}
+
+/* LATERAIS */
+.cert-card.side {
+  opacity: 0.6;
+  transform: scale(0.9);
+  filter: blur(0.5px);
+}
+
+/* IMAGEM */
+.cert-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-card__img {
+  transform: scale(1.05);
+}
+
+/* TEXTO */
+.cert-card__title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.cert-card__meta {
+  font-size: var(--text-xs);
+  color: var(--color-gray-400);
+}
+
+/* BOTÕES */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--color-white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all var(--transition-base);
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.carousel__btn:hover {
+  background: rgba(10,132,255,0.2);
+  box-shadow: var(--glow-electric);
+}
+
+.carousel__btn--prev {
+  left: 0;
+}
+
+.carousel__btn--next {
+  right: 0;
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+  .cert-card {
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cert-card {
+    min-width: 320px;
+  }
+}

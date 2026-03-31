@@ -482,3 +482,54 @@ if ('IntersectionObserver' in window) {
 }
 
 console.log('%c LH Techs Solutions ', 'background:#0A84FF;color:#fff;font-weight:bold;padding:4px 8px;border-radius:4px;');
+
+const track = document.querySelector('.carousel__track');
+const cards = document.querySelectorAll('.cert-card');
+const prevBtn = document.querySelector('.carousel__btn--prev');
+const nextBtn = document.querySelector('.carousel__btn--next');
+const container = document.querySelector('.carousel');
+
+let index = 0;
+
+function updateCarousel() {
+  if (!cards.length) return;
+
+  const cardWidth = cards[0].offsetWidth + 24;
+  const offset = (container.offsetWidth / 2) - (cardWidth / 2);
+
+  track.style.transform = `translateX(${offset - index * cardWidth}px)`;
+
+  cards.forEach(card => card.classList.remove('active', 'side'));
+
+  if (cards[index]) {
+    cards[index].classList.add('active');
+  }
+
+  if (cards[index - 1]) {
+    cards[index - 1].classList.add('side');
+  }
+
+  if (cards[index + 1]) {
+    cards[index + 1].classList.add('side');
+  }
+}
+
+// BOTÕES
+nextBtn.addEventListener('click', () => {
+  index++;
+  if (index >= cards.length) index = cards.length - 1;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  index--;
+  if (index < 0) index = 0;
+  updateCarousel();
+});
+
+// INICIA CENTRALIZADO
+index = 1;
+updateCarousel();
+
+// DEBUG (verifica se botão funciona)
+console.log("Carrossel carregado");

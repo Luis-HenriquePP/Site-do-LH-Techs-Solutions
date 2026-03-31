@@ -42,6 +42,7 @@
         <ul class="nav__list">
           <li><a href="#inicio"   class="nav__link" data-section="inicio">Início</a></li>
           <li><a href="#sobre"    class="nav__link" data-section="sobre">Sobre</a></li>
+          <li><a href="#certificados"    class="nav__link" data-section="certificados">Certificados</a></li>
           <li><a href="#servicos" class="nav__link" data-section="servicos">Serviços</a></li>
           <li><a href="#contato"  class="nav__link" data-section="contato">Contato</a></li>
         </ul>
@@ -212,7 +213,64 @@
 
     </div>
   </section>
+  <br>
+  <br>
 
+
+  <!--═══════════════════════════════════════════════
+       CARROSSEL COM OS CERTIFICADOS
+  ═══════════════════════════════════════════════ -->
+
+  <section class="certificados section" id="certificados">
+  <div class="container">
+
+    <div class="section__header">
+      <span class="section__tag">Certificados</span>
+      <h2 class="section__title">
+        Minhas <span class="gradient-text">Certificações</span>
+      </h2>
+      <p class="section__subtitle">
+        Conhecimento comprovado através de cursos e especializações.
+      </p>
+    </div>
+
+    <div class="certificados__wrapper">
+
+      <div class="carousel">
+
+        <!-- BOTÃO ESQUERDA -->
+        <button type="button" class="carousel__btn carousel__btn--prev">❮</button>
+
+        <!-- TRACK -->
+        <div class="carousel__track">
+
+        <a href="certificados/Certificado_page-0001.jpg" target="_blank">
+          <div class="cert-card">
+            <img src="certificados/Certificado_page-0001.jpg" class="cert-card__img">
+            <h3 class="cert-card__title">Fundamentos de TI</h3>
+            <p class="cert-card__meta">Fundação Bradesco</p>
+          </div>
+        </a>
+
+          <a href="certificados/Coursera 0BAIIPL1KPFI_page-0001.jpg" target="_blank">
+            <div class="cert-card">
+              <img src="certificados/Coursera 0BAIIPL1KPFI_page-0001.jpg" class="cert-card__img">
+              <h3 class="cert-card__title">Google IT Support</h3>
+              <h5>Trilha de 5 cursos </h5>
+              <p class="cert-card__meta">Coursera</p>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- BOTÃO DIREITA -->
+        <button type="button" class="carousel__btn carousel__btn--next">❯</button>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- ═══════════════════════════════════════════════
        SERVIÇOS (DINÂMICO — VIA API)
@@ -231,10 +289,21 @@
     <div class="services__grid">
 
       <div class="service-card">
-        <img src="imagens/formatar.jpg" class="service-card__img">
+        <img src="images/formatar.jpg" class="service-card__img">
         <h3 class="service-card__name">Formatação completa com backup ou sem</h3>
         <p class="service-card__desc">
           Formatação completa do sistema com instalação limpa, remoção de vírus e opção de backup dos seus arquivos importantes.
+        </p>
+        <div class="service-card__footer">
+          <span class="service-card__price">84,90R$</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/interna.jpg" class="service-card__img">
+        <h3 class="service-card__name">Limpeza preventiva - Básica</h3>
+        <p class="service-card__desc">
+          Limpeza interna básica com remoção de poeira e sujeiras leves, ajudando a melhorar a ventilação do equipamento.
         </p>
         <div class="service-card__footer">
           <span class="service-card__price">99,90R$</span>
@@ -242,21 +311,21 @@
       </div>
 
       <div class="service-card">
-        <img src="imagens/limpeza.jpg" class="service-card__img">
-        <h3 class="service-card__name">Limpeza preventiva - Básica</h3>
+        <img src="images/interna.jpg" class="service-card__img">
+        <h3 class="service-card__name">Limpeza preventiva - moderada</h3>
         <p class="service-card__desc">
-          Limpeza interna básica com remoção de poeira e sujeiras leves, ajudando a melhorar a ventilação do equipamento.
+          Limpeza interna moderada com desmontagem parcial e remoção profunda de poeira.
         </p>
         <div class="service-card__footer">
-          <span class="service-card__price">119,90R$</span>
+          <span class="service-card__price">124,90R$</span>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="imagens/limpeza.jpg" class="service-card__img">
-        <h3 class="service-card__name">Limpeza preventiva - moderada</h3>
+        <img src="images/interna.jpg" class="service-card__img">
+        <h3 class="service-card__name">Limpeza preventiva - complexa</h3>
         <p class="service-card__desc">
-          Limpeza interna moderada com desmontagem parcial e remoção profunda de poeira.
+          Limpeza completa com desmontagem total e troca de pasta térmica para melhor desempenho.
         </p>
         <div class="service-card__footer">
           <span class="service-card__price">149,90R$</span>
@@ -264,32 +333,10 @@
       </div>
 
       <div class="service-card">
-        <img src="imagens/limpeza.jpg" class="service-card__img">
-        <h3 class="service-card__name">Limpeza preventiva - complexa</h3>
-        <p class="service-card__desc">
-          Limpeza completa com desmontagem total e troca de pasta térmica para melhor desempenho.
-        </p>
-        <div class="service-card__footer">
-          <span class="service-card__price">199,90R$</span>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="imagens/Lexterna.jpg" class="service-card__img">
+        <img src="images/externa.jpg" class="service-card__img">
         <h3 class="service-card__name">Limpeza externa</h3>
         <p class="service-card__desc">
           Limpeza de teclado, tela e carcaça deixando o equipamento higienizado e com aparência de novo.
-        </p>
-        <div class="service-card__footer">
-          <span class="service-card__price">89,90R$</span>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="imagens/otimizar.jpg" class="service-card__img">
-        <h3 class="service-card__name">Otimização de desempenho</h3>
-        <p class="service-card__desc">
-          Ajustes no sistema para melhorar velocidade e desempenho geral do computador.
         </p>
         <div class="service-card__footer">
           <span class="service-card__price">69,90R$</span>
@@ -297,7 +344,18 @@
       </div>
 
       <div class="service-card">
-        <img src="imagens/montagem.jpg" class="service-card__img">
+        <img src="images/otimização.jpg" class="service-card__img">
+        <h3 class="service-card__name">Otimização de desempenho</h3>
+        <p class="service-card__desc">
+          Ajustes no sistema para melhorar velocidade e desempenho geral do computador.
+        </p>
+        <div class="service-card__footer">
+          <span class="service-card__price">59,90R$</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/montagem.jpg" class="service-card__img">
         <h3 class="service-card__name">Montagem de computador</h3>
         <p class="service-card__desc">
           Montagem completa com peças fornecidas pelo cliente (fonte, processador, memória RAM, armazenamento, etc.).
@@ -308,7 +366,7 @@
       </div>
 
       <div class="service-card">
-        <img src="imagens/upgrade.jpg" class="service-card__img">
+        <img src="images/upgrade.jpg" class="service-card__img">
         <h3 class="service-card__name">Upgrade</h3>
         <p class="service-card__desc">
           Melhoria de hardware. O cliente pode trazer as peças ou solicitar que façamos a compra.
@@ -318,6 +376,60 @@
         </div>
       </div>
 
+      <div class="service-card">
+        <img src="images/diagnostico.jpg" class="service-card__img">
+        <h3 class="service-card__name">Diagnóstico Completo de Hardware e Sistema</h3>
+        <p class="service-card__desc">
+          Eu analiso a saúde do seu HD/SSD, bateria, desempenho geral e atualizações, e te mostro o que está afetando seu computador.
+        </p>
+        <div class="service-card__footer">
+          <span class="service-card__price">64,90 R$</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/basico.jpg" class="service-card__img">
+        <h3 class="service-card__name">Pacote Básico</h3>
+        <p class="service-card__desc">
+          Limpeza essencial do dia a dia<br><br>
+          Limpeza Preventiva Básica<br>
+          Limpeza Externa
+        </p>
+        <div class="service-card__footer">
+          <span class="service-card__price">💰 De: 169,80<br>
+👉 Por: 139,90</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/essencial.jpg" class="service-card__img">
+        <h3 class="service-card__name">Pacote Essencial</h3>
+        <p class="service-card__desc">
+          Limpeza completa + performance<br><br>
+          Limpeza preventiva moderada<br>
+          Limpeza externa<br>
+          Otimização de desempenho<br>
+        <div class="service-card__footer">
+          <span class="service-card__price">💰 De: 254,70<br>
+👉 Por: 199,90</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/premium.jpg" class="service-card__img">
+        <h3 class="service-card__name">Pacote Premium</h3>
+        <p class="service-card__desc">
+          Limpeza profunda + máximo desempenho<br><br>
+          Limpeza preventiva moderada<br>
+          Limpeza externa<br>
+          Otimização de desempenho<br>
+          Diagnóstico completo de hardware e sistema<br>
+        </p>
+        <div class="service-card__footer">
+          <span class="service-card__price">💰 De: 309,70<br>
+👉 Por: 249,90</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
