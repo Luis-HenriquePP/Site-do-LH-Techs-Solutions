@@ -527,9 +527,6 @@ prevBtn.addEventListener('click', () => {
   updateCarousel();
 });
 
-// INICIA CENTRALIZADO
-index = 1;
-updateCarousel();
 
 // DEBUG (verifica se botão funciona)
 console.log("Carrossel carregado");
