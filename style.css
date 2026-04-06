@@ -1621,12 +1621,11 @@ a.channel__card:hover .channel__arrow {
 }
 
 /* CARROSSEL */
-.carousel {
+..carousel {
   overflow: hidden;
   position: relative;
   display: flex;
-  justify-content: center;
-  z-index: 1;
+  justify-content: flex-start; /* ou remove essa linha */
 }
 
 .carousel__track {
